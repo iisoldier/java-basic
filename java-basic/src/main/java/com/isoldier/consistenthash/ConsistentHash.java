@@ -5,6 +5,7 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 /**
+ * 一致性哈希
  * @author jinmeng on 16/06/2018.
  * @version 1.0
  */
