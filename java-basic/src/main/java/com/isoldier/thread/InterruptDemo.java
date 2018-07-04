@@ -1,7 +1,5 @@
 package com.isoldier.thread;
 
-import javax.sound.midi.Soundbank;
-
 /**
  * 线程的中断机制测试
  * @author jinmeng on 2018/6/30.

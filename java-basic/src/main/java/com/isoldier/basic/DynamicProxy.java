@@ -23,49 +23,51 @@ public class DynamicProxy {
 				RealSubject.class.getClassLoader(),
 				RealSubject.class.getInterfaces(), handler);
 		// 4.通过代理对象调用方法
+
 		proxySubject.request();
 	}
-}
 
+	/**
+	 * 接口类
+	 *
+	 * @author isoldier
+	 *
+	 */
+	interface Subject {
+		void request();
+	}
 
-/**
- * 接口类
- * 
- * @author isoldier
- *
- */
-interface Subject {
-	void request();
-}
+	/**
+	 * 委托类
+	 */
+	static class RealSubject implements Subject {
+		@Override
+		public void request() {
+			System.out.println("====RealSubject Request====");
+		}
+	}
 
-/**
- * 委托类
- */
-class RealSubject implements Subject {
-	@Override
-	public void request() {
-		System.out.println("====RealSubject Request====");
+	/**
+	 * 代理类的调用处理器
+	 */
+	static class ProxyHandler implements InvocationHandler {
+		private Subject subject;
+
+		public ProxyHandler(Subject subject) {
+			this.subject = subject;
+		}
+
+		@Override
+		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+
+			// 定义预处理的工作，当然你也可以根据 method的不同进行不同的预处理工作
+			System.out.println("====before====");
+
+			Object result = method.invoke(subject, args);
+			System.out.println("====after====");
+			return result;
+		}
 	}
 }
 
-/**
- * 代理类的调用处理器
- */
-class ProxyHandler implements InvocationHandler {
-	private Subject subject;
 
-	public ProxyHandler(Subject subject) {
-		this.subject = subject;
-	}
-
-	@Override
-	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-
-		// 定义预处理的工作，当然你也可以根据 method的不同进行不同的预处理工作
-		System.out.println("====before====");
-
-		Object result = method.invoke(subject, args);
-		System.out.println("====after====");
-		return result;
-	}
-}

@@ -6,6 +6,7 @@ import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * DelayQueue 内部通过优先队列实现
  * @author jinmeng on 2018/7/2.
  * @version 1.0
  */
