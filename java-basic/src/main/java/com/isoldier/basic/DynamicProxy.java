@@ -1,5 +1,7 @@
 package com.isoldier.basic;
 
+import sun.misc.ProxyGenerator;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -25,6 +27,7 @@ public class DynamicProxy {
 		// 4.通过代理对象调用方法
 
 		proxySubject.request();
+
 	}
 
 	/**
