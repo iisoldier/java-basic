@@ -17,7 +17,7 @@ public class ReactiveDemo {
 
         observableDemo();
 
-        flowableDemo();
+//        flowableDemo();
 
     }
 
@@ -102,6 +102,7 @@ public class ReactiveDemo {
         }, BackpressureStrategy.BUFFER);
 
         flowable.subscribe(subscriber);
+
     }
 
 

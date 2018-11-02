@@ -19,8 +19,13 @@ public class StringUtils {
     }
 
     public static void main(String[] args) {
+        System.out.println(Runtime.getRuntime().availableProcessors());
         System.out.println(formatStrLen( 234,9));
         System.out.println(formatStrLen(1234567890,9));
+
+        String users = "-89522";
+        String[] managerList = users.split(",");
+        System.out.println(managerList);
 
     }
 

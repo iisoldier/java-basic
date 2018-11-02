@@ -34,7 +34,7 @@ public class ClassLoaderDemo {
     public  void testUdClassLoader() throws IllegalAccessException, InstantiationException, ClassNotFoundException {
 
         println("------------------------------------------");
-        System.out.println("------------------test2------------------------");
+        System.out.println("------------------test ud classloader------------------------");
         // 自定义ClassLoader
         ClassLoader myLoader = new MyClassLoader();
         Class<?> clazz = myLoader.loadClass("com.isoldier.basic.ClassLoaderDemo");
@@ -45,6 +45,7 @@ public class ClassLoaderDemo {
         System.out.println(obj.getClass().getClassLoader());
         System.out.println(obj.getClass().getClassLoader().getParent());
         System.out.println(obj.getClass().getClassLoader().getParent().getParent());
+        System.out.println(obj.getClass().getClassLoader().getParent().getParent().getParent());
     }
 
 

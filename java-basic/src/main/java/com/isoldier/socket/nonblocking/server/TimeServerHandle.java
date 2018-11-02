@@ -45,7 +45,7 @@ public class TimeServerHandle implements Runnable {
                  * select() 是阻塞操作,直到监听到有时间到达才返回
                  */
 
-                int cnt = selector.select(1000);
+                int cnt = selector.select();
                 if(cnt == 0){
                     System.out.println("no client ...");
                 }
