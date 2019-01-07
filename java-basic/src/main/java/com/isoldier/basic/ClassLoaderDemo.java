@@ -1,6 +1,9 @@
 package com.isoldier.basic;
 
 
+import com.isoldier.basic.bean.Student;
+
+import javax.sound.midi.Soundbank;
 import java.io.InputStream;
 
 /**
@@ -14,11 +17,20 @@ public class ClassLoaderDemo {
 
         ClassLoaderDemo classLoaderDemo = new ClassLoaderDemo();
 
-        classLoaderDemo.testClassLoader();
-        classLoaderDemo.testUdClassLoader();
+        classLoaderDemo.testLoader();
+//        classLoaderDemo.testClassLoader();
+//        classLoaderDemo.testUdClassLoader();
 
 
     }
+
+    public  void testLoader() {
+//        Student student = new Student();
+        Class clazz  = String.class;
+
+        System.out.println(clazz);
+    }
+
 
 
     public  void testClassLoader() {

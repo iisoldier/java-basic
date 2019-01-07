@@ -20,7 +20,7 @@ public class DelayQueueDemo {
         initConsumer();
         try {
             // 等待消费者初始化完毕
-            TimeUnit.SECONDS.sleep(3);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -8,19 +8,20 @@ package com.isoldier.basic;
 public class StaticBlock {
 
     public static void main(String[] args){
+        System.out.println("order: ------");
         new StaticCodeDemo();
     }
 
     static class StaticCodeDemo{
 
         StaticCodeDemo(){
-            System.out.println("无参构造函数");
+            System.out.println("3.无参构造函数");
         }
         static{
-            System.out.println("静态代码块");
+            System.out.println("1.静态代码块");
         }
         {
-            System.out.println("普通代码块");
+            System.out.println("2.普通代码块");
         }
 
     }

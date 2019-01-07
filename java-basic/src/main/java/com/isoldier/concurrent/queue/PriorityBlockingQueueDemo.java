@@ -35,10 +35,6 @@ public class PriorityBlockingQueueDemo {
 
 
 
-
-
-
-
     class Student{
         int age;
 
