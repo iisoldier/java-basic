@@ -1,4 +1,4 @@
-package com.isoldier.basic;
+package com.isoldier.basic.reference;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
