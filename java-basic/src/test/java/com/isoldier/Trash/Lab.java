@@ -10,6 +10,8 @@ public class Lab {
 
     public static void main(String[] args){
 
+        System.out.println(Integer.parseInt(null));
+//        System.out.println(String.valueOf(null));
         int num = -1;
         System.out.println(num >> 2);
         System.out.println(num << 2);
