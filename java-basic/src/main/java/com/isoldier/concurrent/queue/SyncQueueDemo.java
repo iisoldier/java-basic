@@ -1,7 +1,9 @@
 package com.isoldier.concurrent.queue;
 
-import java.util.Queue;
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author jinmeng on 2018/9/29.

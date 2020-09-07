@@ -28,7 +28,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>19.0</version>
+            <version>23.0</version>
         </dependency>
         <dependency>
             <groupId>io.reactivex.rxjava2</groupId>
@@ -42,6 +42,21 @@
             <artifactId>protobuf-java</artifactId>
             <version>3.2.0</version>
         </dependency>
+
+       <dependency>
+            <groupId>com.codahale.metrics</groupId>
+            <artifactId>metrics-core</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
+        </dependency>
+
+
     </dependencies>
     <build>
 

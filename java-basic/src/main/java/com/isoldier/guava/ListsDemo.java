@@ -3,6 +3,7 @@ package com.isoldier.guava;
 import com.google.common.collect.Lists;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author jinmeng on 2018/7/26.
@@ -15,8 +16,10 @@ public class ListsDemo {
         List<Long> list =  Lists.newArrayList(1L,2L,3L,4L,5L,6L,7L,8L,9L);
         List<List<Long>> originalPageList = Lists.partition(list, 3);
 
+        System.out.println(list.stream().filter(e-> e>2).collect(Collectors.toList()));
 
         System.out.println(originalPageList.toString());
+
 
     }
 

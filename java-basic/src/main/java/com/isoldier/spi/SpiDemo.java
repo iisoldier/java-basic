@@ -1,6 +1,5 @@
 package com.isoldier.spi;
 
-import java.sql.Driver;
 import java.util.ServiceLoader;
 
 /**
@@ -15,6 +14,11 @@ public class SpiDemo {
         ServiceLoader<HelloInterface> loaders = ServiceLoader.load(HelloInterface.class);
         for (HelloInterface in : loaders) {
             in.sayHello();
+        }
+        try {
+            Thread.sleep(1000000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

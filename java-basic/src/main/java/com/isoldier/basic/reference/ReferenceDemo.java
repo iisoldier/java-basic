@@ -21,14 +21,14 @@ public class ReferenceDemo {
             System.out.println("same object");
         }
         strongRef = null;
-        System.gc();
-        System.gc();
-        System.gc();
+
         List<Object> list = new ArrayList();
         while (true){
+
             System.out.println(weakRef.get());
             list.add(new OMObject());
             if(weakRef.get() == null){
+                // jvm gc之后
                 System.out.println("!!!!!!!!!now gc has happened!!!!!!!!!");
                 break;
             }
@@ -39,7 +39,7 @@ public class ReferenceDemo {
 
         private byte[] OM_OBJECT;
         public OMObject() {
-            this.OM_OBJECT = new byte[1024 * 1024];
+            this.OM_OBJECT = new byte[1024 * 512];
         }
     }
 
@@ -47,7 +47,7 @@ public class ReferenceDemo {
 
         private byte[] OM_OBJECT;
         public BigOMObject() {
-            this.OM_OBJECT = new byte[1024 * 1024 * 3];
+            this.OM_OBJECT = new byte[1024 * 1024];
         }
     }
 }

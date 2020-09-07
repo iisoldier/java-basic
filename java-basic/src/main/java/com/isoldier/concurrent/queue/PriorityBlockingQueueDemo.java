@@ -1,7 +1,6 @@
 package com.isoldier.concurrent.queue;
 
 import java.util.Comparator;
-import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.concurrent.PriorityBlockingQueue;
 

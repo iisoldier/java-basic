@@ -2,17 +2,17 @@ package com.isoldier.hook;
 
 /**
  * addShutdownHook 可以用于在程序结束时做一些特性的清理工作，下面是一个简单的使用样例
+ *
  * @author jinmeng on 2019/1/4.
  * @version 1.0
  */
 public class HookDemo {
 
-    // a class that extends thread that is to be called when program is exiting
 
     public static void main(String[] args) {
         try {
 
-            // 注册shutdown hook
+            // 注册shutdown hook, 程序kill -9 pid 时不生效
             Runtime.getRuntime().addShutdownHook(new Message());
 
             // 程序启动

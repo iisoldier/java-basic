@@ -74,6 +74,7 @@ public class ReceiveServer {
                 socketChannel.write(returnBuffer);
             }
 
+
             System.out.println("socketChannel close...!");
         }
     }
